@@ -5,7 +5,7 @@ INSERT INTO burgers
     )
 VALUES
     (
-        "Beef Double Cheese Burger",
+        "Cheese Burger",
         0
 ),
     (

@@ -3,9 +3,8 @@ CREATE DATABASE burgers_db;
 USE burgers_db;
 
 -- Create the table wishes.
-CREATE TABLE burgers
-(
-    id int NOT NULL
+CREATE TABLE burgers (
+    id int (10) NOT NULL
     AUTO_INCREMENT,
 burger_name varchar
     (255) NOT NULL,
@@ -13,3 +12,5 @@ devoured BOOLEAN,
 PRIMARY KEY
     (id)
 );
+
+SELECT * FROM burgers;
