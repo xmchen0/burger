@@ -1,41 +1,81 @@
-<h1>Welcome to Hello Burgers!</h1>
-
-<h2>Menu</h2>
-
-<ul>
-    <li>Cheese burger</li>
-    <li>Double cheese burger</li>
-    <li>Spicy chicken burger</li>
-    <li>Veggie burger</li>
-    <li>Fish burger</li>
-    <li>Steak sandwich</li>
-</ul>
-
-<h2>Your order</h2>
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="bu">Don't see what you like? <br> Place an order here: </label>
-        <input type="text" id="bu" name="name">
-
-        <button type="submit">Add</button>
+<div id="page">
+    <div class="title">
+        <p>Hello Burgers!</p>
+        <hr class="line">
     </div>
+    <div class='icon-scroll'></div>
+</div>
 
-</form>
+<div class="menu">
+    <div class="container">
+        <h2 class="text-monospace">Menu Selection</h2>
+        <div class="row">
+            <div class="col-sm">
+                <ul>
+                    <h5><i class="fas fa-hamburger"></i></h5>
+                    <li>Cheese burger</li>
+                    <li>Double cheese burger</li>
+                    <li>Spicy chicken burger</li>
+                    <li>Veggie burger</li>
+                    <li>Fish burger</li>
+                    <li>Steak sandwich</li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                <ul>
+                    <h5><i class="fas fa-cookie-bite"></i></h5>
+                    <li>Hot chips</li>
+                    <li>Sweet potato chips</li>
+                    <li>Cookies</li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                <ul>
+                    <h5><i class="fas fa-beer"></i></h5>
+                    <li>Molson Canadian</li>
+                    <li>House wine</li>
+                    <li>Asahi</li>
+                    <li>Sapporo</li>
+                    <li>Soju</li>
+                    <li>Bubble tea</li>
+                    <li>Coke</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h2>Devoured it!</h2>
+<div class="orderDevoured">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 text-md-left">
+                <h3 class="text-monospace">Your Order</h3>
+                <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+                <form class="create-form font-weight-light text-muted" name="myForm" onsubmit="return validateForm()" method="POST">
+                    <div class="form-group">
+                        <label for="bu"><em>* Don't see what you like? </em><br><br><p>Place an order here: </p></label>
+                        <input type="text" id="bu" name="name">
+                        <button class="add-btn" type="submit"><i class="fas fa-plus"></i></button>
+                    </div>
+                </form>
+            </div>
 
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
+            <div class="col-md-4 text-md-left">
+                <h3 class="text-monospace">Devoured It!</h3>
+                <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{> burgers/burger-block devoured=false}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

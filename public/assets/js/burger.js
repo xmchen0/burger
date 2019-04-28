@@ -43,3 +43,11 @@ $(function () {
         );
     });
 });
+
+function validateForm() {
+    var x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+        alert("Ops! Please enter only letters");
+        return false;
+    }
+}
