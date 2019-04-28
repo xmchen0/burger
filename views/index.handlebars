@@ -1,15 +1,17 @@
-<h1>Hello Burgers!</h1>
+<h1>Welcome to Hello Burgers!</h1>
 
-<h2>My Menu</h2>
+<h2>Menu</h2>
 
 <ul>
-    {{#each burgers}}
-    <li>{{name}}</li>
-    {{/each}}
+    <li>Cheese burger</li>
+    <li>Double cheese burger</li>
+    <li>Spicy chicken burger</li>
+    <li>Veggie burger</li>
+    <li>Fish burger</li>
+    <li>Steak sandwich</li>
 </ul>
 
-<h2>My Order</h2>
-
+<h2>Your order</h2>
 <ul>
     {{#each burgers}}
     {{#unless devoured}}
@@ -17,6 +19,16 @@
     {{/unless}}
     {{/each}}
 </ul>
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="bu">Don't see what you like? <br> Place an order here: </label>
+        <input type="text" id="bu" name="name">
+
+        <button type="submit">Add</button>
+    </div>
+
+</form>
 
 <h2>Devoured it!</h2>
 
@@ -27,15 +39,3 @@
     {{/if}}
     {{/each}}
 </ul>
-
-<h2>Place your order:</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="bu">Type here </label>
-        <input type="text" id="bu" name="name">
-
-        <button type="submit">Add</button>
-    </div>
-
-</form>
