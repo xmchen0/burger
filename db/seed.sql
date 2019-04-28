@@ -1,14 +1,8 @@
-INSERT INTO burgers (
-    burger_name,
-    devoured
-)
-
-VALUES (
-	"Cheese Burger", 0
-), (
-	"Spicy Chicken Burger", 0
-), (
-	"Big Mac", 0
-);
+INSERT INTO burgers (name) VALUES ('Cheese burger');
+INSERT INTO burgers (name) VALUES ('Double cheese burger');
+INSERT INTO burgers (name) VALUES ('Spicy chicken burger');
+INSERT INTO burgers (name) VALUES ('Veggie burger');
+INSERT INTO burgers (name) VALUES ('Fish burger');
+INSERT INTO burgers (name) VALUES ('Steak sandwich');
 
 SELECT * FROM burgers;
