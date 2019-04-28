@@ -1,4 +1,4 @@
--- DROP database IF EXISTS burgers_db; // to refresh data
+-- DROP database IF EXISTS burgers_db;  // to reset database
 CREATE DATABASE burgers_db;
 USE burgers_db;
 

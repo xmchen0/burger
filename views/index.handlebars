@@ -1,16 +1,20 @@
+<!-- Title -->
 <div id="page">
     <div class="title">
-        <p>Hello Burgers!</p>
+        <p>Eat · Da · Burger</p>
         <hr class="line">
     </div>
     <div class='icon-scroll'></div>
 </div>
+<!--/. Title -->
 
+<!-- Menu Section -->
 <div class="menu">
     <div class="container">
         <h2 class="text-monospace">Menu Selection</h2>
         <div class="row">
-            <div class="col-sm">
+            <!-- Hamburgers -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
                 <ul>
                     <h5><i class="fas fa-hamburger"></i></h5>
                     <li>Cheese burger</li>
@@ -21,15 +25,18 @@
                     <li>Steak sandwich</li>
                 </ul>
             </div>
-            <div class="col-sm">
+            <!-- Sides -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
                 <ul>
                     <h5><i class="fas fa-cookie-bite"></i></h5>
                     <li>Hot chips</li>
                     <li>Sweet potato chips</li>
+                    <li>Onion rings</li>
                     <li>Cookies</li>
                 </ul>
             </div>
-            <div class="col-sm">
+            <!-- Drinks -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
                 <ul>
                     <h5><i class="fas fa-beer"></i></h5>
                     <li>Molson Canadian</li>
@@ -44,12 +51,14 @@
         </div>
     </div>
 </div>
+<!--/. Menu Section -->
 
+<!-- Order & Devoured -->
 <div class="orderDevoured">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 text-md-left">
-                <h3 class="text-monospace">Your Order</h3>
+            <div class="col-md-6">
+                <h4 class="text-monospace text-center">Food Bucket</h4>
                 <ul>
                     {{#each burgers}}
                     {{#unless devoured}}
@@ -57,8 +66,7 @@
                     {{/unless}}
                     {{/each}}
                 </ul>
-                <form class="create-form font-weight-light text-muted" name="myForm" onsubmit="return validateForm()"
-                    method="POST">
+                <form class="create-form font-weight-light text-muted">
                     <div class="form-group">
                         <label for="bu"><em>* Don't see what you like? </em><br><br>
                             <p>Place an order here: </p>
@@ -73,8 +81,8 @@
                 </form>
             </div>
 
-            <div class="col-md-4 text-md-left">
-                <h3 class="text-monospace">Devoured It!</h3>
+            <div class="col-md-6">
+                <h4 class="text-monospace text-center">Devoured It!</h4>
                 <ul>
                     {{#each burgers}}
                     {{#if devoured}}
@@ -86,6 +94,7 @@
         </div>
     </div>
 </div>
+<!--/. Order & Devoured -->
 
 <!-- Footer -->
 <footer>
@@ -97,3 +106,5 @@
 
     </div>
 </footer>
+<!--/. Footer -->
+</div>

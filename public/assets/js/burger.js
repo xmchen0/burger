@@ -1,13 +1,13 @@
 
-// Add successfully pop up
-$(document).ready(function () {
-    $(".alert").hide();
-    $("#button").click(function showAlert() {
-        $(".alert").fadeTo(3000, 500).slideUp(500, function () {
-            $(".alert").slideUp(500);
-        });
-    })
-});
+// Add successfully pop up -- Not working as expected // Need to fix
+// $(document).ready(function () {
+//     $(".alert").hide();
+//     $("#button").click(function showAlert() {
+//         $(".alert").fadeTo(3000, 500).slideUp(500, function () {
+//             $(".alert").slideUp(500);
+//         });
+//     })
+// });
 
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
@@ -48,6 +48,21 @@ $(function () {
         }).then(
             function () {
                 console.log("created new burger");
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
+    });
+
+    $(".delete-burger").on("click", function (event) {
+        var id = $(this).data("id");
+
+        // Send the DELETE request.
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE"
+        }).then(
+            function () {
+                console.log("deleted burger", id);
                 // Reload the page to get the updated list
                 location.reload();
             }
