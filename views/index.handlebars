@@ -14,7 +14,7 @@
         <h2 class="text-monospace">Menu Selection</h2>
         <div class="row">
             <!-- Hamburgers -->
-            <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="col-sm">
                 <ul>
                     <h5><i class="fas fa-hamburger"></i></h5>
                     <li>Cheese burger</li>
@@ -26,7 +26,7 @@
                 </ul>
             </div>
             <!-- Sides -->
-            <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="col-sm">
                 <ul>
                     <h5><i class="fas fa-cookie-bite"></i></h5>
                     <li>Hot chips</li>
@@ -36,7 +36,7 @@
                 </ul>
             </div>
             <!-- Drinks -->
-            <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="col-sm">
                 <ul>
                     <h5><i class="fas fa-beer"></i></h5>
                     <li>Molson Canadian</li>
@@ -54,7 +54,7 @@
 <!--/. Menu Section -->
 
 <!-- Order & Devoured -->
-<div class="orderDevoured">
+<div id="devoured" class="orderDevoured">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -66,17 +66,14 @@
                     {{/unless}}
                     {{/each}}
                 </ul>
-                <form class="create-form font-weight-light text-muted">
+                <form class="create-form font-weight-light text-muted" name="myForm" onsubmit="return validateForm()"
+                    method="POST">
                     <div class="form-group">
                         <label for="bu"><em>* Don't see what you like? </em><br><br>
                             <p>Place an order here: </p>
                         </label>
-                        <input type="text" id="bu" name="name" class="overflow-visible">
-                        <button id="button" type="submit" title="Add food"><i class="fas fa-plus"></i></button>
-                        <div class="alert alert-success alert-dismissable">
-                            <button class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            Success! message sent successfully.
-                        </div>
+                        <input type="text" id="bu" name="name">
+                        <button class="add-btn" type="submit"><i class="fas fa-plus"></i></button>
                     </div>
                 </form>
             </div>
@@ -103,8 +100,6 @@
         <script>document.write(new Date().getFullYear());</script> <span> Kathy Chen</span><br>
         <p>Made with <i class="fas fa-heart" aria-hidden="true"></i> in Toronto, Canada</p>
         <a href="http://github.com/xmkchen"><i class="fab fa-github-alt"><span>GitHub</span></i>
-
     </div>
 </footer>
 <!--/. Footer -->
-</div>
