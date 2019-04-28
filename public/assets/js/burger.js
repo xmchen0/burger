@@ -1,3 +1,14 @@
+
+// Add successfully pop up
+$(document).ready(function () {
+    $(".alert").hide();
+    $("#button").click(function showAlert() {
+        $(".alert").fadeTo(3000, 500).slideUp(500, function () {
+            $(".alert").slideUp(500);
+        });
+    })
+});
+
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
     $(".change-devoured").on("click", function (event) {
@@ -43,11 +54,3 @@ $(function () {
         );
     });
 });
-
-function validateForm() {
-    var x = document.forms["myForm"]["name"].value;
-    if (x == "") {
-        alert("Ops! Please enter only letters");
-        return false;
-    }
-}

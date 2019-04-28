@@ -64,7 +64,11 @@
                             <p>Place an order here: </p>
                         </label>
                         <input type="text" id="bu" name="name" class="overflow-visible">
-                        <button class="add-btn" type="submit"><i class="fas fa-plus"></i></button>
+                        <button id="button" type="submit" title="Add food"><i class="fas fa-plus"></i></button>
+                        <div class="alert alert-success alert-dismissable">
+                            <button class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            Success! message sent successfully.
+                        </div>
                     </div>
                 </form>
             </div>
@@ -82,3 +86,14 @@
         </div>
     </div>
 </div>
+
+<!-- Footer -->
+<footer>
+    <div id="footer-text">
+        Copyright &copy;
+        <script>document.write(new Date().getFullYear());</script> <span> Kathy Chen</span><br>
+        <p>Made with <i class="fas fa-heart" aria-hidden="true"></i> in Toronto, Canada</p>
+        <a href="http://github.com/xmkchen"><i class="fab fa-github-alt"><span>GitHub</span></i>
+
+    </div>
+</footer>
