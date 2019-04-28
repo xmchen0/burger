@@ -7,6 +7,10 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
 
 <a href="http://g.recordit.co/6Sflh8YXwk.gif"><img src="https://media.giphy.com/media/Sv3qvJdKgy1hIjqVoI/giphy.gif" border="0"></a>
 
+## Link to Heroku
+
+* Coming soon (experiencing technical issues with deployment)
+
 <hr> 
 
 ## Getting Started
