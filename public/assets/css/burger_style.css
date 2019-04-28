@@ -68,7 +68,7 @@ h5 {
     color: #fff !important;
     text-decoration: none;
     border-radius: 50px;
-  }
+}
 
 .primary-btn {
     background-image: -moz-linear-gradient(0deg, #fd7e14 0%, #fdd53e 100%);
@@ -166,6 +166,10 @@ h5 {
     margin: 33px;
     font-size: 16px;
 }
+
+.overflow-visible {
+    white-space: initial;
+  }
 
 /*--------------------------------------------------------------
 # Footer

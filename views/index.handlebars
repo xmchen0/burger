@@ -57,10 +57,13 @@
                     {{/unless}}
                     {{/each}}
                 </ul>
-                <form class="create-form font-weight-light text-muted" name="myForm" onsubmit="return validateForm()" method="POST">
+                <form class="create-form font-weight-light text-muted" name="myForm" onsubmit="return validateForm()"
+                    method="POST">
                     <div class="form-group">
-                        <label for="bu"><em>* Don't see what you like? </em><br><br><p>Place an order here: </p></label>
-                        <input type="text" id="bu" name="name">
+                        <label for="bu"><em>* Don't see what you like? </em><br><br>
+                            <p>Place an order here: </p>
+                        </label>
+                        <input type="text" id="bu" name="name" class="overflow-visible">
                         <button class="add-btn" type="submit"><i class="fas fa-plus"></i></button>
                     </div>
                 </form>
