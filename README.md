@@ -48,7 +48,7 @@ Download zip file or Git Clone repository will get you a copy of the project up 
 * [jQuery](https://jquery.com/) - JavaScript library
 * [Node.js](https://nodejs.org/en/) - Command-line applications
 * [Express.js](https://www.npmjs.com/package/express) - Fast, unopinionated, minimalist web framework for node
-* [HTTP methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) - Request methods -> `router.get()` `router.post()` `router.put` `router.delete`
+* [HTTP methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) - Request methods -> `router.get()` `router.post()` `router.put()` `router.delete()`
 * [NPM](https://www.npmjs.com/) - JS library management
 * [Heroku](https://www.heroku.com/) - Deploy assignment platform
 * [GitHub](https://www.github.com/) - Web-based hosting service for version control using Git
